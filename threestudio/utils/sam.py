@@ -12,7 +12,7 @@ from lang_sam import LangSAM
 
 
 class LangSAMTextSegmentor(torch.nn.Module):
-    def __init__(self, sam_type="vit_h"):
+    def __init__(self, sam_type="sam2.1_hiera_large"):
         super().__init__()
         self.model = LangSAM(sam_type)
 

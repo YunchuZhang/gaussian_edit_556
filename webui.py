@@ -689,6 +689,7 @@ class WebUI:
         train=False,
     ) -> Dict[str, Any]:
         self.gaussian.localize = local
+        cam.full_proj_transform = cam.full_proj_transform.float()
 
         render_pkg = render(cam, self.gaussian, self.pipe, self.background_tensor)
         image, viewspace_point_tensor, _, radii = (
